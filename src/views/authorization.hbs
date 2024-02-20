@@ -1,0 +1,26 @@
+<div class="container-authorization">
+  <h5>Авторизация</h5>
+  <form class="form-signap" action="" method="post">
+    <div class="content-authorization">
+      <div class="input-box">
+        <p class="details">Электронная почта</p>
+        <input type="email" id="emailInput" name="email" class="form-control" autocomplete="email" required />
+      </div>
+      <div class="input-box">
+        <p class="details">пароль</p>
+        <input type="password" id="passwordInput" name="password" class="form-control password-input"
+          autocomplete="new-password" minlength="8" maxlength="20" required />
+      </div>
+    </div>
+    <div class="button">
+      <input type="submit" name="submit" value="Войти">
+      <div id="error-message" style="display: none;">не правильный логин или пароль</div>
+    </div>
+    <div class="messageError">
+      {{#if errorAuthorization}}
+      <div class="errorEmail">{{errorAuthorization}}</div>
+      {{/if}}
+    </div>
+    <p class="message">Нет аккаунта? <a href="/auth/registration">Зарегистрироваться</a></p>
+  </form>
+</div>

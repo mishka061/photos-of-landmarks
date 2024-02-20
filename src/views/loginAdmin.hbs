@@ -1,0 +1,43 @@
+<body>
+  <form class="form-signap" action="" method="post">
+    <div class="login">
+      <div class="login-screen">
+        <div class="app-title">
+          <h5>Войти в учетную запись администратора</h5>
+        </div>
+
+        <div class="login-form">
+          <div class="control-group">
+            <input
+              type="email"
+              name="email"
+              class="login-field"
+              value=""
+              placeholder="электронная почта"
+              id="login-email"
+            />
+            <label class="login-field-icon fui-user" for="login-name"></label>
+          </div>
+          <div class="control-group">
+            <input
+              type="password"
+              name="password"
+              class="login-field"
+              value=""
+              placeholder="пароль"
+              id="login-pass"
+            />
+            <label class="login-field-icon fui-lock" for="login-pass"></label>
+          </div>
+          <input
+            type="submit"
+            name="submit"
+            class="btn btn-primary btn-large btn-block"
+            value="Войти"
+          />
+        </div>
+          <p class="message">Нет учетной записи? <a href="/admin/registration">Создать</a></p>
+      </div>
+    </div>
+  </form>
+</body>

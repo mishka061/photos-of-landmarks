@@ -52,3 +52,4 @@ npm install
 Запустите проект:
 
 npm start
+# photos-of-landmarks

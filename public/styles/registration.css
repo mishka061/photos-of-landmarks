@@ -1,0 +1,260 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #71b7e6cc, #9c59b6c2);
+}
+
+h5 {
+  text-align: center;
+}
+
+#headerRegistrAndAdmin {
+  background: #8000ffa8;
+  background: -webkit-linear-gradient(
+    to top,
+    #e100ffbd,
+    rgba(128, 0, 255, 0.815)
+  );
+  background: linear-gradient(to top, #e100ffbb, #8000ffb4);
+  width: 100%;
+}
+
+.footer {
+  background: #8000ffa8;
+  background: -webkit-linear-gradient(
+    to top,
+    #e100ffbd,
+    rgba(128, 0, 255, 0.815)
+  );
+  background: linear-gradient(to top, #e100ffbb, #8000ffb4);
+  width: 100%;
+  color: #fffefe;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.headerImages img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.headerImages button {
+  border-radius: 5px;
+}
+.headerImages a {
+  text-decoration: none;
+}
+
+.container-registration,
+.container-authorization {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+.container-registration {
+  max-width: 500px;
+  margin: 40px auto;
+}
+.container-authorization {
+  max-width: 400px;
+  margin: 100px auto;
+}
+
+.content-registration {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container1 ,
+.container2 {
+  width: 45%;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #b1b1b1;
+  margin-top: 10px;
+}
+#inputContainer3 {
+  width: 45%;
+}
+
+.form-registr {
+  width: 100%;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+.input-registr input {
+  padding: 2px;
+}
+
+.details-name {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.show-password-label {
+  color: #9b9a9a;
+}
+
+form .category {
+  display: flex;
+  width: 80%;
+  margin: 12px 0;
+  justify-content: space-between;
+}
+form .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+form .category label .dot {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  margin: 15px 5px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two {
+  background: #b501fcd5;
+}
+form input[type="radio"] {
+  display: none;
+}
+form .button {
+  height: 40px;
+  margin: 30px 0;
+}
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+form .button input:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+.tooltip-toggle {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 256px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.tooltip-toggle:hover .tooltip-text,
+.tooltip-toggle:focus .tooltip-text {
+  display: block;
+}
+
+.tooltip-toggle img {
+  width: 14px;
+  height: 14px;
+}
+.radio {
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.errorEmail,
+.errorLogin,
+.errorLoginEndEmail {
+  text-align: center;
+
+  color: red;
+  font-size: 18px;
+  animation: shake 0.4s;
+}
+.errorAuthorization {
+  padding-bottom: 5px;
+  text-align: center;
+  color: red;
+  font-size: 18px;
+  animation: shake 0.4s;
+}
+
+.message {
+  text-align: center;
+}
+
+.message a {
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+#confirmPasswordError {
+  display: none;
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes shakes {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}

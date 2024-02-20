@@ -1,0 +1,56 @@
+{{#if tokenIsPresent}}
+<div class="profileArrPhoto">
+  <div class="container-fluid" id="contentPhoto">
+    <div class="swiper-container">
+      <div class="wrapper">
+        {{#each photoArr}}
+        <div class="containerProfilePhoto">
+          <div id="photoLink">
+            <h3>{{attraction}}</h3>
+          </div>
+          <div id="photoText">
+            <p>Страна: {{countries}}</p>
+          </div>
+          <div id="photoText">
+            <p>Город: {{city}}</p>
+          </div>
+          <div id="photoText">
+            <p>Дата: {{data}}</p>
+          </div>
+          {{#if img}}
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              {{#each img}}
+              <div class="swiper-slide"><img src="/{{this}}" /></div>
+              {{/each}}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          {{/if}}
+          <div id="photoReplyComment">
+            {{#each comments}}
+            <div class="textComment">
+              <p>{{text}}</p>
+              </div>
+            <button id="replyCommit">Ответить на комментарий</button>
+            <div class="commentReplyForm" style="display: none;">
+              <form action="/profile/{{../userId}}" method="POST">
+                <input type="hidden" name="photoId" value="{{photoId}}">
+                <input type="hidden" name="text" value="{{text}}">
+                <input type="hidden" name="commentNumber" value="{{commentNumber}}">
+                <textarea name="replyComment" class="textAreaReplyCommit"> </textarea>
+                <input type="submit" class="textAreaoReplySubmit" value="Ответить">
+              </form>
+            </div>
+            {{/each}}
+          </div>
+
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}

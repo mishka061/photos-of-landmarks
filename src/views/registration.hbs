@@ -1,0 +1,207 @@
+<div class="container-registration">
+  <h5>Регистрация</h5>
+  <hr>
+  <form class="form-signap" action=" " method="post">
+    <div class="content-registration">
+
+      <div class="container1">
+        <div class="input-registr">
+          <p class="details-name">Имя</p>
+          <input type="text" class="form-registr" name="name" required autocomplete="name" />
+        </div>
+        <div class="input-registr">
+          <p class="details-name">Фамилия</p>
+          <input type="text" class="form-registr" name="surname" required />
+        </div>
+      </div>
+      <div class="container2">
+        <div class="input-registr">
+          <p class="details-name" id="emailContentInput">Электронная почта</p>
+          <input type="email" name="email" id="emailInput" class="form-registr" autocomplete="email" required />
+
+        </div>
+        <div class="input-registr">
+          <p class="details-name">Логин</p>
+          <input type="text" id="login" class="form-registr" name="login" autocomplete="login" minlength="3"
+            maxlength="20" required />
+        </div>
+      </div>
+    </div>
+    <div class="container3">
+      <div class="input-registr" id="inputContainer3">
+        <p class="details-name">Пароль</p>
+        <div class="password-toggle">
+          <input type="password" id="passwordInput" name="password" class="form-registr password-input"
+            autocomplete="new-password" required />
+          <label class="show-password-label">
+            <input type="checkbox" class="password-checkbox" id="passwordCheckbox1">
+            Показать пароль
+          </label>
+        </div>
+      </div>
+      <div class="input-registr" id="inputContainer3">
+        <p class="details-name">Повторите пароль</p>
+        <div class="password-toggle">
+          <input type="password" id="confirmPasswordInput" class="form-registr confirm-password-input"
+            autocomplete="new-password" required />
+          <label class="show-password-label">
+            <input type="checkbox" class="password-checkbox" id="passwordCheckbox2">
+            Показать пароль
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="error-message" id="confirmPasswordError">Пароли не совпадают</div>
+    <div class="contentBtn">
+      <div class="radio-details-name">
+        <input type="radio" name="radio" id="dot-1" value="Пользователь">
+        <input type="radio" name="radio" id="dot-2" value="Модератор">
+        <div class="category">
+          <label for="dot-1">
+            <p class="dot one"></p>
+            <p class="radio">Пользователь</p>
+            <div class="tooltip-toggle">
+              <img src="/chto-luchshe.jpg" alt="" class="tooltip-icon">
+              <div class="tooltip-text">Пользователь может поставить лайк, прокомментировать фотографию и отвечать
+                на комментарии</div>
+            </div>
+          </label>
+          <label for="dot-2">
+            <p class="dot two"></p>
+            <p class="radio">Модератор</p>
+            <div class="tooltip-toggle">
+              <img src="/chto-luchshe.jpg" alt="" class="tooltip-icon">
+              <div class="tooltip-text">Модератор на отдельной странице может модерировать фотографии</div>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="messageError">
+        {{#if errorLoginEndEmail}}
+        <div class="errorLoginEndEmail">{{errorLoginEndEmail}}</div>
+        {{else if errorEmail}}
+        <div class="errorEmail">{{errorEmail}}</div>
+        {{else if errorLogin}}
+        <div class="errorLogin">{{errorLogin}}</div>
+        {{/if}}
+      </div>
+    </div>
+    <div class="button">
+      <input type="submit" name="submit" value="Зарегистрироваться">
+    </div>
+  </form>
+  <p class="message">Зарегистрировались? <a href="/auth/authorization">Войдите</a></p>
+</div>
+
+
+
+
+
+
+
+{{!--
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Responsive Registration Form | CodingLab </title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details-nam">
+          <div class="input-registr">
+            <p class="details-name">Full Name</p>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-registr">
+            <p class="details-name">Username</p>
+            <input type="text" placeholder="Enter your username" required>
+          </div>
+          <div class="input-registr">
+            <p class="details-name">Email</p>
+            <input type="text" placeholder="Enter your email" required>
+          </div>
+          <div class="input-registr">
+            <p class="details-name">Phone Number</p>
+            <input type="text" placeholder="Enter your number" required>
+          </div>
+          <div class="input-registr">
+            <p class="details-name">Password</p>
+            <input type="text" placeholder="Enter your password" required>
+          </div>
+          <div class="input-registr">
+            <p class="details-name">Confirm Password</p>
+            <input type="text" placeholder="Confirm your password" required>
+          </div>
+        </div>
+        <div class="gender-details-nam">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <p class="gender-title">Gender</p>
+          <div class="category">
+            <label for="dot-1">
+              <p class="dot one"></p>
+              <p class="gender">Male</p>
+            </label>
+            <label for="dot-2">
+              <p class="dot two"></p>
+              <p class="gender">Female</p>
+            </label>
+            <label for="dot-3">
+              <p class="dot three"></p>
+              <p class="gender">Prefer not to say</p>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html> --}}
+
+{{! views\registration.hbs
+<div class="container-fluid-body" id="registration">
+  <form class="form-signap" action="" method="post">
+    <h2>Регистрация</h2>
+    <div class="form-group">
+      <input type="text" class="form-registr" name="surname" placeholder="фамилия" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-registr" name="name" placeholder="имя" required autocomplete="name">
+    </div>
+    <div class="form-group">
+      <input type="text" id="login" class="form-registr" name="login" placeholder="введите логин" autocomplete="login"
+        minlength="3" maxlength="20" required>
+    </div>
+    <div class="form-group">
+      <input type="email" id="emailInput" name="email" class="form-registr" placeholder="email" autocomplete="email"
+        required>
+    </div>
+    <div class="form-group">
+      <input type="password" id="passwordInput" name="password" class="form-registr password-input" placeholder="пароль"
+        autocomplete="new-password" minlength="8" maxlength="20" required>
+    </div>
+    <div class="form-group">
+      <input type="password" id="confirmPasswordInput" name="confirm-password"
+        class="form-registr confirm-password-input" placeholder="повторите пароль" autocomplete="new-password"
+        minlength="8" maxlength="20" required>
+      <div class="error-message" id="confirmPasswordError">Пароли не совпадают</div>
+    </div>
+    <input type="submit" name="submit" class="btn btn-outline-danger form-registr" value="отправить">
+  </form>
+
+</div> }}

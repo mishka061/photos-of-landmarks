@@ -1,0 +1,35 @@
+<header class="dashboard-header">
+    <div class="dashboard-header__logo">
+    </div>
+    <div class="dashboard-header-exit">
+        <button class="hederBtnExit"><a href="/">Выйти</a></button>
+    </div>
+</header>
+<main>
+    <div class="conteinerPanel">
+        <h4>Зарегистрированные пользователи</h4>
+        <div class="container-fluid-body" id="divRole">
+            {{#each usersArr}}
+            <div class="usersAdminPanel">
+                <div class="radioRole">
+                    <h6>{{name}}: <span class="spanRole">{{role}}</span> </h6>
+                </div>
+                <div class="formAdmivPanel">
+                    <form action="/admin" method="POST">
+                        <input type="hidden" name="_id" value="{{_id}}">
+                        <input type="hidden" name="name" value="{{name}}">
+                        <input type="hidden" name="surname" value="{{surname}}">
+                        <input type="hidden" name="login" value="{{login}}">
+                        <input type="hidden" name="password" value="{{password}}">
+                        <select name="role">
+                            <option>Пользователь</option>
+                            <option>Модератор</option>
+                        </select>
+                        <input type="submit" name="submit" class="submit">
+                    </form>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>

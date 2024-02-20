@@ -1,0 +1,125 @@
+{{#if tokenIsPresent}}
+<div class="ModeratorPhotoArr">
+    <div class="container-fluid" id="contentPhoto">
+        <div class="swiper-container">
+            <div class="wrapper">
+                {{#each photoModeratorArr}}
+                <div class="containerEditEntry">
+                    <div id="photoLink">
+                        <h3>{{attraction}}</h3>
+                    </div>
+                    <div id="photoText">
+                        <p>Страна: {{countries}}</p>
+                    </div>
+                    <div id="photoText">
+                        <p>Город:{{city}}</p>
+                    </div>
+                    <div id="photoText">
+                        <p>Дата фотографии:{{data}}</p>
+                    </div>
+                    {{#isArray img}}
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            {{#each img}}
+                            <div class="swiper-slide img-fluid">
+                                <img src="/{{this}}" class="img-fluid" id="imgModerator" />
+                            </div>
+                            {{/each}}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    {{else}}
+                    <div class="oneImg">
+                        <img src="{{img}}" class="img-fluid" />
+                    </div>
+                    {{/isArray}}
+                    <div id="photoReplyComment">
+                        {{#each comments}}
+                        <div class="textComment">
+                            <p>{{text}}</p>
+                            {{#if replyComment}}
+                            <p id="replyComment">{{replyComment}}</p>
+                            {{/if}}
+                        </div>
+                        {{/each}}
+                    </div>
+                    <button class="editEntry">Редактировать запись</button>
+                    <input type="hidden" name="id" value="{{_id}}">
+                    <button class="deleteEntry"><a href="/delete/{{_id}}">Удалить запись</a></button>
+                </div>
+                <div id="editPhoto" style="display: none;">
+                    <form class="formElem" action="/moderator" method="POST" enctype="multipart/form-data">
+                        <div class="addForm" id="addFormModerator">
+                            {{#isArray img}}
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    {{#each img}}
+                                    <div class="swiper-slide img-fluid">
+                                        <img src="/{{this}}" class="img-fluid" />
+                                    </div>
+                                    {{/each}}
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                            {{else}}
+                            <div class="oneImg">
+                                <img src="{{img}}" class="img-fluid" />
+                            </div>
+                            {{/isArray}}
+                            <div class="form-group">
+                                <p>Название достопримечательности</p>
+                                <input name="attraction" placeholder="название достопримечательности"
+                                    value="{{attraction}}" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <p>Название страны</p>
+                                <input name="countries" placeholder="название страны" class="form-control"
+                                    value="{{countries}}" />
+                            </div>
+                            <div class="form-group">
+                                <p>Название города</p>
+                                <input name="city" placeholder="название города" class="form-control"
+                                    value="{{city}}" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="data"
+                                    oninput="this.value = this.value.replace(/[^\d.]/g, '')" pattern="\d{2}.\d{2}.\d{4}"
+                                    placeholder="Добавьте дату фотографии в формате 01.02.2016" autocomplete="bday"
+                                    value="{{data}}" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="file" name="image[]" class="form-control" multiple />
+                            </div>
+                            {{#if comments}}
+                            {{#each comments}}
+                            <p>Комментарий:</p>
+                            <div class="textComment">
+                                <textarea name="comment" class="textAreaCommit">{{text}}</textarea>
+                                {{#if replyComment}}
+                                <p>Ответить на комментарий: </p>
+                                <textarea name="replyComment" class="textAreaReplyCommit">{{replyComment}} </textarea>
+                                {{/if}}
+                            </div>
+                            {{/each}}
+                            {{/if}}
+                            <div class="addFile"></div>
+                            <input type="hidden" name="id" value="{{_id}}">
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-outline-success form-control" id="btnFormAdd"
+                                    value="Сохранить" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <a href="#"><img src="/3760-illustration-of-blue-and-purple-right-arrows-pv.png" alt=""
+            class="purple-right-arrows"></a>
+</div>
+{{/if}}

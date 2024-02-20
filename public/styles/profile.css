@@ -1,0 +1,45 @@
+.profileArrPhoto {
+  min-height: 80%;
+  margin-bottom: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contentPhoto h1 {
+  text-align: center;
+}
+
+.containerProfilePhoto {
+  background-color: #ffffff;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 5px;
+  margin: 40px;
+  padding: 20px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.textAreaReplyCommit {
+  margin-top: 10px;
+  width: 100%;
+  height: 100px;
+}
+
+.textAreaoReplySubmit,
+#replyCommit {
+  margin: 10px 0 0;
+  width: 100%;
+  border-radius: 5px;
+
+  background: linear-gradient(to top, #e100ff93, #8000ff7c);
+}
+.textAreaoReplySubmit:hover,
+#replyCommit:hover {
+  color: white;
+  background: linear-gradient(to top, #e100ff, #8000ff);
+}

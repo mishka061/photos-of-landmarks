@@ -1,0 +1,106 @@
+body {
+  background: #9cecfb;
+  background: -webkit-linear-gradient(to top, #0052d4, #65c7f7, #9cecfb);
+  background: linear-gradient(to top, #0052d4, #65c7f7, #9cecfb);
+}
+.login {
+  margin: 50px auto;
+  width: 300px;
+}
+.login-screen {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+}
+.app-title {
+  padding-left: 5px;
+  color: #777;
+}
+
+.login-form {
+  text-align: center;
+}
+.control-group {
+  margin-bottom: 10px;
+}
+input {
+  background-color: #ecf0f1;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 0;
+  width: 250px;
+  transition: border 0.5s;
+}
+.btn {
+  border: 2px solid transparent;
+  background: #3498db;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.login-link {
+  font-size: 12px;
+  color: #444;
+  display: block;
+  margin-top: 12px;
+}
+.message {
+  padding: 10px 0 0 10px;
+}
+.message a {
+  margin: 10px;
+}
+.login-field {
+  padding-left: 10px;
+}
+#headerRegistrAndAdmin {
+  background: #8000ffa8;
+  background: -webkit-linear-gradient(
+    to top,
+    #e100ffbd,
+    rgba(128, 0, 255, 0.815)
+  );
+  background: linear-gradient(to top, #e100ffbb, #8000ffb4);
+  width: 100%;
+}
+
+.footer {
+  background: #8000ffa8;
+  background: -webkit-linear-gradient(
+    to top,
+    #e100ffbd,
+    rgba(128, 0, 255, 0.815)
+  );
+  background: linear-gradient(to top, #e100ffbb, #8000ffb4);
+  width: 100%;
+  color: #fffefe;
+  text-align: center;
+  padding: 20px;
+}
+.headerImages img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.headerImages button {
+  border-radius: 5px;
+}
+.headerImages a {
+  text-decoration: none;
+}

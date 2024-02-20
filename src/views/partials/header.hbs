@@ -1,0 +1,73 @@
+{{#if tokenIsPresent}}
+<div class="container-fluid" id="header-body">
+  <div class="headerImages">
+    <img src="/Rotating-Globe-from-Wikipedia.gif" alt="" srcset="" />
+    <button class="headerIndexTokken" id="headerIndexTokken"><a href="/"> Главная страница</a></button>
+  </div>
+  <div class="headerTite">
+    <h3>Достопримечательности мира</h3>
+  </div>
+  <div class="headerContent">
+    <div class="headerLogin">
+      <img src="/menu-comments.png" alt="" class="imgNavbar">
+    </div>
+    <div class="navbarMenu" style="display: none;">
+
+      <button class="btnHeaderIndex" id="profileHederBtn"><a href="/profile/${user._id}">Профиль</a></button>
+      <button class="btnHeaderIndex" id="addPhotoHederBtn"><a href="/addPhoto">Добавить
+          достопримечательность</a></button>
+      {{#if role}}
+      <button class="btnHeaderIndex" id="moderatorHederBtn"><a href="/moderator"> Для модераторов</a></button>
+      {{/if}}
+      <button class="headerExitTokken"><a href="/auth/registration" id="headerExit">Выйти</a></button>
+      <div class="formSearh">
+        <form action="" method="POST">
+          <p>Поиск достопримечательностей </p>
+          <input class="inputSidebar" name="search">
+          <input type="submit" class="cidebarSubmit" value="Найти">
+          <input type="hidden" name="action" value="search">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{else}}
+<div class="container-fluid" id="header-body">
+  <div class="headerImages">
+    <img src="/Rotating-Globe-from-Wikipedia.gif" alt="" srcset="" />
+    <button class="headerIndexTokken" id="headerIndexTokken"><a href="/"> Главная страница</a></button>
+  </div>
+  <div class="headerTite">
+    <h3>Достопримечательности мира</h3>
+  </div>
+  <div class="headerContent">
+    <div class="headerLogin">
+      <img src="/menu-comments.png" alt="" class="imgNavbar">
+    </div>
+    <div class="navbarMenu" style="display: none;">
+      <button><a href="/auth/authorization">Авторизация</a></button>
+      <button><a href="/auth/registration">Регистрация</a></button>
+      <button><a href="/admin/login">Войти как администратор</a></button>
+      <div class="formSearh">
+        <form action="" method="POST">
+          <p>Поиск достопримечательностей </p>
+          <input class="inputSidebar" name="search">
+          <input type="submit" class="cidebarSubmit" value="Найти">
+          <input type="hidden" name="action" value="search">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+
+
+
+
+
+
+
+
+

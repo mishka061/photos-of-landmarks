@@ -1,0 +1,52 @@
+.form-group {
+  margin: 10px 0;
+}
+
+.containerEditEntry,
+#editPhoto {
+  background-color: #ffffff;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.editEntry {
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 5px;
+  background: linear-gradient(to top, #e100ff93, #8000ff7c);
+}
+
+.editEntry:hover {
+  color: white;
+  background: linear-gradient(to top, #e100ff, #8000ff);
+}
+
+.deleteEntry {
+  width: 100%;
+  margin-top: 10px;
+  border-color: red;
+  border-radius: 5px;
+  background: #f12711;
+  background: -webkit-linear-gradient(to left, #f12711, #f5af19);
+  background: linear-gradient(to left, #f12711, #f5af19);
+}
+
+.deleteEntry:hover {
+  color: white;
+  background: #f00000;
+  background: -webkit-linear-gradient(to right, #f00000, #dc281e);
+  background: linear-gradient(to right, #f00000, #dc281e);
+}
+.deleteEntry a {
+  text-decoration: none;
+  color: #000;
+}
+.deleteEntry a:hover {
+  color: white;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}

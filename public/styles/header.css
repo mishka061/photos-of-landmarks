@@ -1,0 +1,261 @@
+.headerImages img,
+.headerImages-tokken img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+#header-body {
+  height: auto;
+  background: #8000ffa8;
+  background: -webkit-linear-gradient(
+    to top,
+    #e100ffbd,
+    rgba(128, 0, 255, 0.815)
+  );
+  background: linear-gradient(to top, #e100ffbb, #8000ffb4);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.active {
+  background-color: #f5cef8;
+}
+
+.headerImages button,
+.headerLogin button,
+.headerAdmin button,
+.headerRegistr button {
+  border-radius: 5px;
+}
+.headerImages a,
+.headerLogin a,
+.headerAdmin a,
+.headerRegistr a {
+  text-decoration: none;
+}
+.headerTite h3{
+  margin-top: 15px;
+  font-size: 30px;
+  font-style: italic;
+}
+.headerContent {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+
+.headerLogin {
+  text-align: end;
+}
+
+.headerLogin img {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.navbarMenu {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: auto;
+}
+.navbarMenu a {
+  text-decoration: none;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.navbarMenu button {
+  border-radius: 5px;
+  margin: 5px 0;
+  width: 100%;
+  text-align: center;
+}
+.navbarMenu button:hover,
+.headerIndexTokken:hover,
+.headerImages button:hover,
+.headerBtnIndex:hover {
+  background-color: #ffc7f8;
+}
+
+.formSearh {
+  padding: 0 10px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 5px;
+  text-align: center;
+}
+.formSearh p {
+  margin-bottom: 0;
+}
+.inputSidebar {
+  width: 100%;
+}
+
+.cidebarSubmit {
+  width: 100%;
+  margin: 5px 0;
+}
+
+#header-body-tokken {
+  height: auto;
+  background: #8000ffa8;
+  background: -webkit-linear-gradient(
+    to top,
+    #e100ffbd,
+    rgba(128, 0, 255, 0.815)
+  );
+  background: linear-gradient(to top, #e100ffbb, #8000ffb4);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.headerExit {
+  text-align: end;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.headerIndexTokken,
+.headerBtnIndex {
+  border-radius: 5px;
+}
+.headerIndex {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.btnHeaderIndex {
+  border-radius: 5px;
+  margin: 10px;
+}
+.headerExitTokken {
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.headerLogin a,
+.headerAdmin a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+.headerLogin a:hover,
+.headerAdmin a:hover {
+  color: blue;
+}
+.moderator a,
+.headerIndex a,
+.headerPhoto a,
+.headerExit a,
+.headerIndexTokken a,
+.headerBtnIndex a {
+  text-decoration: none;
+  color: blue;
+  font-size: 16px;
+}
+.formSearh p {
+  font-size: 16px;
+}
+.moderator a:hover,
+.headerIndex a:hover,
+.headerPhoto a:hover,
+.headerExit a:hover,
+.headerIndexTokken a:hover,
+.headerBtnIndex a:hover {
+  color: violet;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .moderator a,
+  .headerIndex a,
+  .headerPhoto a,
+  .headerExit a,
+  .headerIndexTokken a,
+  .headerBtnIndex a,
+  .navbarMenu a,
+  .formSearh p {
+    font-size: 15px;
+  }
+  .headerLogin img {
+    width: 35px;
+    height: 35px;
+  }
+  .headerImages-tokken img,
+  .headerImages img {
+    width: 45px;
+    height: 45px;
+  }
+  .btnHeaderIndex {
+    margin: 3px 3px 3px 0;
+  }
+  .headerTite h3{
+    margin-top: 15px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .moderator a,
+  .headerIndex a,
+  .headerPhoto a,
+  .headerExit a,
+  .headerIndexTokken a,
+  .headerBtnIndex a,
+  .navbarMenu a,
+  .formSearh p {
+    font-size: 14px;
+  }
+  .headerLogin img {
+    width: 30px;
+    height: 30px;
+  }
+  .headerImages-tokken img,
+  .headerImages img {
+    width: 40px;
+    height: 40px;
+  }
+  .btnHeaderIndex {
+    margin: 3px 0;
+  }
+  .headerTite h3{
+    margin-top: 15px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .moderator a,
+  .headerIndex a,
+  .headerPhoto a,
+  .headerExit a,
+  .headerIndexTokken a,
+  .headerBtnIndex a,
+  .navbarMenu a,
+  .formSearh p {
+    font-size: 13px;
+  }
+  .headerLogin img {
+    width: 25px;
+    height: 25px;
+  }
+  .headerImages-tokken img,
+  .headerImages img {
+    width: 35px;
+    height: 35px;
+  }
+  .btnHeaderIndex {
+    margin: 3px;
+  }
+  .headerTite h3{
+    margin-top: 15px;
+    font-size: 18px;
+  }
+}

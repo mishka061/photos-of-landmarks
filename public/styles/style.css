@@ -1,0 +1,332 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+#mainBodyContent {
+  background-color: hsl(0, 0%, 95%);
+  overflow-x: hidden;
+}
+.containerAddPhoto {
+  background-color: #ffffff;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 5px;
+  margin: 40px;
+  padding: 10px 30px;
+  max-width: 800px;
+}
+
+p {
+  font-size: 18px;
+  margin: 2px;
+}
+
+.profileArrPtoto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.purple-right-arrows {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+}
+
+#photoLink {
+  padding: 5px;
+
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+#photoLink h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+#cidebar {
+  margin-top: 20px;
+}
+
+.containerAddPhotoSearh {
+  margin-top: 20px;
+  padding: 20px;
+  width: 400px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.descriptionSite {
+  margin-top: 20px;
+  padding: 20px;
+  width: 400px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+.descriptionSite img {
+  width: 100%;
+  object-fit: cover;
+}
+.arrSearh {
+  padding: 0 30px;
+  position: relative;
+}
+
+.textCommentBtn {
+  width: 100%;
+  border-radius: 5px;
+  background: linear-gradient(to top, #e100ff93, #8000ff7c);
+}
+.textCommentBtn:hover {
+  color: white;
+  background: linear-gradient(to top, #e100ff, #8000ff);
+}
+.btnFormComment {
+  width: 100%;
+
+  border-radius: 5px;
+}
+
+#btnFormAdd {
+  background: linear-gradient(to top, #e100ffbb, #8000ffb4);
+  border-color: black;
+}
+#addInput {
+  border-radius: 5px;
+}
+
+#addPhoto {
+  background-color: #ffffff;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 5px;
+  margin: 20px 0;
+  padding-bottom: 10px;
+  width: 400px;
+}
+
+#replyCommit {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.textComment {
+  border-radius: 5px;
+  border-bottom: 1px solid rgb(212, 210, 210);
+  background-color: #e6e2e2;
+  margin-top: 8px;
+}
+
+.textComment p {
+  padding: 5px;
+}
+.textCommentH6 {
+  margin: 10px;
+  text-align: center;
+}
+
+#formAddComment {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.textAreaSubmit {
+  width: 50%;
+  border-radius: 5px;
+  margin-left: 40px;
+  background: linear-gradient(to top, #e100ff93, #8000ff7c);
+}
+.textAreaSubmit:hover {
+  color: white;
+  background: linear-gradient(to top, #e100ff, #8000ff);
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination {
+  transform: scale(0.5);
+}
+
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mySwiper {
+  width: 100%;
+  aspect-ratio: 16/10;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textAreaCommit {
+  width: 100%;
+  height: 100px;
+  border-radius: 2px;
+}
+.textAreaSubmit {
+  margin: 10px 0 0;
+  width: 100%;
+}
+
+.like {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.like img {
+  width: 30px;
+  height: 30px;
+}
+.divHref {
+  text-align: end;
+  padding: 10px 20px;
+}
+.divHref a {
+  text-decoration: none;
+}
+.pLike p {
+  padding: 5px;
+
+  width: 60px;
+  height: 30px;
+}
+
+.CommentBtn {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.CommentBtnSearch {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.textCommentBtnSearch {
+  width: 60%;
+  border-radius: 5px;
+}
+
+.descriptionSite p {
+  font-size: 14px;
+}
+
+.footer {
+  background: #8000ffa8;
+  background: -webkit-linear-gradient(
+    to top,
+    #e100ffbd,
+    rgba(128, 0, 255, 0.815)
+  );
+  background: linear-gradient(to top, #e100ffbb, #8000ffb4);
+  width: 100%;
+  color: #fffefe;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+.imgNotFound img{
+  width: 70%;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .containerAddPhoto {
+    width: 500px;
+    margin: 35px;
+    padding: 10px 25px;
+  }
+  .containerAddPhotoSearh,
+  .descriptionSite {
+    width: 300px;
+  }
+  .descriptionSite p {
+    font-size: 13px;
+  }
+  .arrSearh {
+    padding: 0 20px;
+  }
+  .purple-right-arrows {
+    width: 25px;
+    height: 25px;
+  }
+  p {
+    font-size: 17px;
+  }
+  #photoLink h3 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .containerAddPhoto {
+    width: 400px;
+    margin: 30px;
+    padding: 10px 20px;
+  }
+  .containerAddPhotoSearh,
+  .descriptionSite {
+    width: 200px;
+  }
+  .descriptionSite p {
+    font-size: 12px;
+  }
+  .arrSearh {
+    padding: 0 15px;
+  }
+  .purple-right-arrows {
+    width: 20px;
+    height: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+  #photoLink h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .containerAddPhoto {
+    width: 480px;
+    margin: 15px;
+    padding: 6px 15px;
+  }
+  .containerAddPhotoSearh {
+    width: 150px;
+  }
+  .descriptionSite {
+    display: none;
+  }
+  .descriptionSite p {
+    font-size: 11px;
+  }
+  .arrSearh {
+    padding: 0 10px;
+  }
+  .purple-right-arrows {
+    width: 15px;
+    height: 15px;
+  }
+  p {
+    font-size: 14px;
+  }
+  #photoLink h3 {
+    font-size: 20px;
+  }
+}

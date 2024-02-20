@@ -1,0 +1,335 @@
+{{#if tokenIsPresent}}
+
+<div class="container-fluid" id="mainBodyContent">
+  <div class="profileArrPtoto">
+    <div id="contentPhoto">
+      {{#each photoArr}}
+      <div class="containerAddPhoto">
+        <div id="photoLink">
+          <h3>{{attraction}}</h3>
+        </div>
+        <div id="photoText">
+          <p>Страна: {{countries}}</p>
+        </div>
+        <div id="photoText">
+          <p>Город: {{city}}</p>
+        </div>
+        <div id="photoText">
+          <p>Дата: {{data}}</p>
+        </div>
+        {{#isArray img}}
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            {{#each img}}
+            <div class="swiper-slide img-fluid">
+              <img src="/{{this}}" class="img-fluid" />
+            </div>
+            {{/each}}
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        {{else}}
+        <div class="oneImg">
+          <img src="{{img}}" class="img-fluid" />
+        </div>
+        {{/isArray}}
+        <div id="photoComment">
+          {{#each comments}}
+          <div class="textComment">
+            <p>{{text}}</p>
+            {{#if replyComment}}
+            <p id="replyComment"> ответ {{replyComment}}</p>
+            {{/if}}
+          </div>
+          {{/each}}
+          <form action="/" method="POST" id="formAddComment" style="display: none;">
+            <input type="hidden" name="action" value="comment">
+            <div class="commentForm" name="{{_id}}">
+              <input type="hidden" name="photoId" value="{{_id}}">
+              <textarea name="comment" class="textAreaCommit"></textarea>
+              <input type="submit" class="textAreaSubmit">
+            </div>
+          </form>
+        </div>
+        <form action="/" method="POST">
+          <input type="hidden" name="action" value="like">
+          <input type="hidden" name="photoId" value="{{_id}}">
+          <div class="like">
+            <div class="btnLike">
+              <button type="submit">
+                <img src="/likeRed.png" alt="" class="likeBlack" id="{{_id}}">
+              </button>
+            </div>
+            <div class="pLike">
+              <p> + {{likes}}</p>
+            </div>
+          </div>
+        </form>
+        <div class="btnFormComment">
+          <button class="textCommentBtn">Написать комментарий</button>
+        </div>
+        <div class="divHref">
+          <a href="/{{login}}" name="{{login}}" value="{{login}}">{{login}}</a>
+        </div>
+      </div>
+      {{/each}}
+      <a href="#"><img src="/3760-illustration-of-blue-and-purple-right-arrows-pv.png" alt=""
+          class="purple-right-arrows"></a>
+    </div>
+    <div id="cidebar" class="container-fluid">
+      <div class="contentSearh">
+        <div class="arrSearh">
+          {{#each result}}
+          <div class="containerAddPhotoSearh">
+            <div id="photoLink">
+              <h5>{{attraction}}</h5>
+            </div>
+            <div id="photoText">
+              <p>Страна: {{countries}}</p>
+            </div>
+            <div id="photoText">
+              <p>Город: {{city}}</p>
+            </div>
+            <div id="photoText">
+              <p>Дата: {{data}}</p>
+            </div>
+            {{#isArray img}}
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                {{#each img}}
+                <div class="swiper-slide img-fluid">
+                  <img src="/{{this}}" class="img-fluid" />
+                </div>
+                {{/each}}
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            {{else}}
+            <div class="oneImg">
+              <img src="{{img}}" class="img-fluid" />
+            </div>
+            {{/isArray}}
+            <div id="photoComment">
+              {{#each comments}}
+              <div class="textComment">
+                <p>{{text}}</p>
+                {{#if replyComment}}
+                <p id="replyComment"> ответ {{replyComment}}</p>
+                {{/if}}
+              </div>
+              {{/each}}
+              <form action="/" method="POST">
+                <input type="hidden" name="action" value="like">
+                <input type="hidden" name="photoId" value="{{_id}}">
+                <div class="like">
+                  <div class="btnLike">
+                    <button type="submit">
+                      <img src="/likeRed.png" alt="" class="likeBlack" id="{{_id}}">
+                    </button>
+                  </div>
+                  <div class="pLike">
+                    <p> + {{likes}}</p>
+                  </div>
+                </div>
+              </form>
+              <button class="textCommentBtn">Написать комментарий</button>
+              <div class="divHref">
+                <a href="/{{login}}" name="{{login}}" value="{{login}}">{{login}}</a>
+              </div>
+            </div>
+            <form action="/" method="POST" id="formAddComment" style="display: none;">
+              <input type="hidden" name="action" value="comment">
+              <div class="commentForm" name="{{_id}}">
+                <input type="hidden" name="photoId" value="{{_id}}">
+                <textarea name="comment" class="textAreaCommit"> </textarea>
+                <input type="submit" class="textAreaSubmit" value="Отправить">
+              </div>
+            </form>
+          </div>
+          {{/each}}
+          <div class="descriptionSite">
+            <p>Добро пожаловать на наш уникальный проект, посвященный красоте мира!</p>
+            <p>Наш сайт - это коллекция
+              впечатляющих фотографий достопримечательностей, созданная самими пользователями. Здесь каждый может
+              поделиться своими воспоминаниями, загрузив увлекательные снимки и делиться восторгом с другими
+              путешественниками.</p>
+            <img src="/globus.jpg"alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{else}}
+<div class="container-fluid" id="mainBodyContent">
+  <div class="profileArrPtoto">
+    <div id="contentPhoto">
+      {{#each photoArr}}
+      <div class="containerAddPhoto">
+        <div id="photoLink">
+          <h3>{{attraction}}</h3>
+        </div>
+        <div id="photoText">
+          <p>Страна: {{countries}}</p>
+        </div>
+        <div id="photoText">
+          <p>Город: {{city}}</p>
+        </div>
+        <div id="photoText">
+          <p>Дата: {{data}}</p>
+        </div>
+        {{#isArray img}}
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            {{#each img}}
+            <div class="swiper-slide img-fluid">
+              <img src="/{{this}}" class="img-fluid" />
+            </div>
+            {{/each}}
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        {{else}}
+        <div class="oneImg">
+          <img src="{{img}}" class="img-fluid" />
+        </div>
+        {{/isArray}}
+        <div id="photoComment">
+          {{#each comments}}
+          <div class="textComment">
+            <p>{{text}}</p>
+            {{#if replyComment}}
+            <p id="replyComment"> ответ {{replyComment}}</p>
+            {{/if}}
+          </div>
+          {{/each}}
+          <form action="/" method="POST" id="formAddComment" style="display: none;">
+            <input type="hidden" name="action" value="comment">
+            <div class="commentForm" name="{{_id}}">
+              <input type="hidden" name="photoId" value="{{_id}}">
+              <textarea name="comment" class="textAreaCommit"></textarea>
+              <input type="submit" class="textAreaSubmit">
+            </div>
+          </form>
+        </div>
+        <form action="/" method="POST">
+          <input type="hidden" name="action" value="like">
+          <input type="hidden" name="photoId" value="{{_id}}">
+          <div class="like">
+            <div class="btnLike">
+              <button type="submit">
+                <img src="/likeRed.png" alt="" class="likeBlack" id="{{_id}}">
+              </button>
+            </div>
+            <div class="pLike">
+              <p> + {{likes}}</p>
+            </div>
+          </div>
+        </form>
+        <div class="btnFormComment">
+          <button class="textCommentBtn">Написать комментарий</button>
+        </div>
+        <div class="divHref">
+          <a href="/{{login}}" name="{{login}}" value="{{login}}">{{login}}</a>
+        </div>
+      </div>
+      {{/each}}
+      <a href="#"><img src="/3760-illustration-of-blue-and-purple-right-arrows-pv.png" alt=""
+          class="purple-right-arrows"></a>
+    </div>
+    <div id="cidebar" class="container-fluid">
+      <div class="contentSearh">
+        <div class="arrSearh">
+          {{#each result}}
+          <div class="containerAddPhotoSearh">
+            <div id="photoLink">
+              <h5>{{attraction}}</h5>
+            </div>
+            <div id="photoText">
+              <p>Страна: {{countries}}</p>
+            </div>
+            <div id="photoText">
+              <p>Город: {{city}}</p>
+            </div>
+            <div id="photoText">
+              <p>Дата: {{data}}</p>
+            </div>
+            {{#isArray img}}
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                {{#each img}}
+                <div class="swiper-slide img-fluid">
+                  <img src="/{{this}}" class="img-fluid" />
+                </div>
+                {{/each}}
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            {{else}}
+            <div class="oneImg">
+              <img src="{{img}}" class="img-fluid" />
+            </div>
+            {{/isArray}}
+            <div id="photoComment">
+              {{#each comments}}
+              <div class="textComment">
+                <p>{{text}}</p>
+                {{#if replyComment}}
+                <p id="replyComment"> ответ {{replyComment}}</p>
+                {{/if}}
+              </div>
+              {{/each}}
+              <form action="/" method="POST">
+                <input type="hidden" name="action" value="like">
+                <input type="hidden" name="photoId" value="{{_id}}">
+                <div class="like">
+                  <div class="btnLike">
+                    <button type="submit">
+                      <img src="/likeRed.png" alt="" class="likeBlack" id="{{_id}}">
+                    </button>
+                  </div>
+                  <div class="pLike">
+                    <p> + {{likes}}</p>
+                  </div>
+                </div>
+              </form>
+              <button class="textCommentBtn">Написать комментарий</button>
+              <div class="divHref">
+                <a href="/{{login}}" name="{{login}}" value="{{login}}">{{login}}</a>
+              </div>
+            </div>
+            <form action="/" method="POST" id="formAddComment" style="display: none;">
+              <input type="hidden" name="action" value="comment">
+              <div class="commentForm" name="{{_id}}">
+                <input type="hidden" name="photoId" value="{{_id}}">
+                <textarea name="comment" class="textAreaCommit"> </textarea>
+                <input type="submit" class="textAreaSubmit" value="Отправить">
+              </div>
+            </form>
+          </div>
+          {{/each}}
+          <div class="descriptionSite">
+            <p>Добро пожаловать на наш уникальный проект, посвященный красоте мира!</p>
+            <p>Наш сайт - это коллекция
+              впечатляющих фотографий достопримечательностей, созданная самими пользователями. Здесь каждый может
+              поделиться своими воспоминаниями, загрузив увлекательные снимки и делиться восторгом с другими
+              путешественниками.</p>
+            <img src="/globus.jpg"
+              alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+
